@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+
+.app {
+  background-color: rgb(152, 26, 101);
+  display: flex;
+  justify-content: center;
+}
+
+
+.principal {
+  width: 1100px;
+  background-color: teal;
+}
