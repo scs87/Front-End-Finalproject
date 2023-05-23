@@ -2,17 +2,39 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 
 
 .app {
-  background-color: rgb(152, 26, 101);
-  display: flex;
-  justify-content: center;
+ display: flex;
+ justify-content: center;
 }
 
 
 .principal {
   width: 1100px;
-  background-color: teal;
+  margin-top: 15px;
+  
 }
+
+body {
+  background-color: black;
+  color: white;
+}
+
+body h1 {
+  font-family: sans-serif;
+  font-size: 26px;
+}
+
+body h2 {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+body p {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
