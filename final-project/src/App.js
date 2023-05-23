@@ -1,10 +1,14 @@
 import './App.css';
+import Header from "./components/Header"
+
 
 function App() {
   return (
     <div className="app">
       <div className="principal">
-        <h1>VAMOS A POR TODAS JODER</h1>
+        <Header />
+        <h1>Search Container</h1>
+        <h1>Media</h1>
       </div>
     </div>
   );
