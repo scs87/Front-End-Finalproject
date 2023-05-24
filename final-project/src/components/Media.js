@@ -1,8 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Media.css"
 
+
 const Media = () => {
-    const [trending, seTrending] = useState ([]);
+    const [trending, setTrending] = useState ([]);
+
+    const randomizeData = (content) => {
+        return content.data.sort(() => Math.random() - 0.5);
+    };
+
+    const getTrendingGiphys = async () => {
+        //get los giphys
+        const trending = await fetchTrendingGiphys();
+        // seteamos los giphys
+        setTrending(randomizeData(trending.data));
+    };
+
+    useEffect (() => {
+        getTrendingGiphys();
+
+    }, []);
+
+    console.log(trending)
+
+   
     return (
         <div className='media'>
             <div className='row'>
