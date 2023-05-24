@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import "./Media.css"
-
+import { fetchTrendingGiphys } from '../api/giphyApi';
+import TrendingGiphy from './TrendingGiphy';
 
 const Media = () => {
     const [trending, setTrending] = useState ([]);
 
     const randomizeData = (content) => {
+       
         return content.data.sort(() => Math.random() - 0.5);
     };
 
@@ -17,11 +19,11 @@ const Media = () => {
     };
 
     useEffect (() => {
-        getTrendingGiphys();
+       getTrendingGiphys()
 
-    }, []);
+   }, []);
 
-    console.log(trending)
+    
 
    
     return (
@@ -31,8 +33,10 @@ const Media = () => {
                     <img src='/images/trending.svg' alt='Trending' />
                     <h1>Trending</h1>
                 </div>
+                {console.log(trending)}
                 <div className='trending-container'>
-                    <p>Content</p>
+                {trending?.map((tendringGiphy, index) => {
+                        return <TrendingGiphy giphy={tendringGiphy} key={index}/> })}
                 </div>
             </div>
             <div className='row'>
