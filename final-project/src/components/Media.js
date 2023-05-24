@@ -57,7 +57,7 @@ const Media = () => {
                     <img src='/images/artists.svg' alt='Artists' />
                     <h1>Artists</h1>
                 </div>
-                <div className='artists-container'>
+                <div className='artist-container'>
                     {artists.map((artistGiphys, index) =>{
                         return <ArtistGiphy  giphy={artistGiphys} key={index} />
                     })}
