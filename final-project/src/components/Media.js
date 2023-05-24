@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Media.css"
 
 const Media = () => {
+    const [trending, seTrending] = useState ([]);
     return (
         <div className='media'>
             <div className='row'>
                 <div className='row-header'>
-
                     <img src='/images/trending.svg' alt='Trending' />
                     <h1>Trending</h1>
                 </div>
