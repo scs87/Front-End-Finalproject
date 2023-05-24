@@ -10,7 +10,7 @@
 }
 
 .menu {
-    background-color: purple;
+
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -19,7 +19,7 @@
 }
 
 .button {
-    background-color: #6d63ff ;
+    background-color: #6d63ff;
     width: 75px;
     height: 35px;
     display: flex;
@@ -40,3 +40,77 @@
 .profile img {
     width: 35px;
 }
+
+.button-wrapper {
+    height: 35px;
+    display: flex;
+    align-items: flex-start;
+    margin-right: 10px;
+}
+
+.reactions {
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+
+}
+
+.entertaiment {
+
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.sports {
+
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.stickers {
+
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.artists {
+
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.moreverticon {
+
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.menu-button {
+    background-color: #121212;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center
+
+}
+
+.hover-reactions:hover {
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.hover-entertaiment:hover {
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.hover-sports:hover {
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.hover-stickers:hover {
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.hover-artists:hover {
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+.hover-moreverticon:hover {
+    background: linear-gradient(90deg, rgba(69, 139, 255, 1) 29%, rgba(137, 165, 227, 1) 56%, rgba(181, 147, 189, 1) 81%, rgba(244, 152, 152, 1) 100%);
+}
+
+
+
+
