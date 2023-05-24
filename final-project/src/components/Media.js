@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import "./Media.css"
-import { fetchTrendingGiphys } from '../api/giphyApi';
+import { fetchSearchedGiphys, fetchTrendingGiphys } from '../api/giphyApi';
 import TrendingGiphy from './TrendingGiphy';
+import giphyArtists from '../artists';
+import ArtistGiphy from './ArtistGiphy'
 
 const Media = () => {
-    const [trending, setTrending] = useState ([]);
+    const [trending, setTrending] = useState([]);
+    const [artists, setArtists] = useState([]);
 
     const randomizeData = (content) => {
-       
+
         return content.data.sort(() => Math.random() - 0.5);
     };
 
@@ -18,14 +21,24 @@ const Media = () => {
         setTrending(randomizeData(trending.data));
     };
 
-    useEffect (() => {
-       getTrendingGiphys()
+    const getArtists = async () => {
+        const artists = await Promise.all(
+        giphyArtists.map(async (giphyArtist) => {
+            return fetchSearchedGiphys(giphyArtist).then((res) => res.data.data);
 
-   }, []);
+        })
+        );
+        setArtists(artists.flat()); 
+     }
+
+    useEffect(() => {
+        getTrendingGiphys();
+        getArtists();
+    }, []);
+
 
     
 
-   
     return (
         <div className='media'>
             <div className='row'>
@@ -33,10 +46,10 @@ const Media = () => {
                     <img src='/images/trending.svg' alt='Trending' />
                     <h1>Trending</h1>
                 </div>
-                {console.log(trending)}
                 <div className='trending-container'>
-                {trending?.map((tendringGiphy, index) => {
-                        return <TrendingGiphy giphy={tendringGiphy} key={index}/> })}
+                    {trending?.map((tendringGiphy, index) => {
+                        return <TrendingGiphy giphy={tendringGiphy} key={index} />
+                    })}
                 </div>
             </div>
             <div className='row'>
@@ -45,7 +58,9 @@ const Media = () => {
                     <h1>Artists</h1>
                 </div>
                 <div className='artists-container'>
-                    <p>Content</p>
+                    {artists.map((artistGiphys, index) =>{
+                        return <ArtistGiphy  giphy={artistGiphys} key={index} />
+                    })}
                 </div>
             </div>
             <div className='row'>
