@@ -21,9 +21,10 @@ const ClipsDeGihpy = ({ giphysArray }) => {
           <div className='videogrande'>
             <img src={giphys?.[0]?.images.downsized.url} alt=''/>
           </div>
-          <div className='videosderecha'></div>
+          <div className='videosderecha'>
           <img src={giphys?.[1]?.images.downsized.url} alt='' />
           <img src={giphys?.[2]?.images.downsized.url} alt=''/>
+          </div>
         </>
         ) : null}
     </div>

@@ -42,7 +42,7 @@ const Media = () => {
     useEffect(() => {
         getTrendingGiphys();
         getArtists();
-        getSearchedGiphys("coffee", setClips);
+        getSearchedGiphys("cats", setClips);
     }, []);
 
         

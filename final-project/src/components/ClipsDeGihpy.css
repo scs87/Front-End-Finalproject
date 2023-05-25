@@ -5,7 +5,6 @@
 }
 
 .videogrande {
-    background-color: orange;
     height: 400px;
     width: 750px;
 }
@@ -17,7 +16,6 @@
 }
 
 .videosderecha {
-    background-color: aqua;
     width: 350px;
     height: 450px;
 }
@@ -25,6 +23,8 @@
 .videosderecha img {
     width: 340px;
     height: 173px;
+    object-fit: cover;
+    border-radius: 4px;
 
 
 }
