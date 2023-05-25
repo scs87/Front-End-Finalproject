@@ -48,7 +48,7 @@ const Header = () => {
                 <h2>Create</h2>
             </div>
             <div className='profile'>
-                <img src="/images/avatar.png" alt='avatar' />
+                <img src="/images/avatar1.png" alt='avatar' />
                 <h2>Sergio</h2>
                 <KeyboardArrowDown />
             </div>
