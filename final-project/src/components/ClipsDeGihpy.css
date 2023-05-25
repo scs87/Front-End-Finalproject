@@ -1,0 +1,30 @@
+.videos {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10px;
+}
+
+.videogrande {
+    background-color: orange;
+    height: 400px;
+    width: 750px;
+}
+
+.videogrande img {
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.videosderecha {
+    background-color: aqua;
+    width: 350px;
+    height: 450px;
+}
+
+.videosderecha img {
+    width: 340px;
+    height: 173px;
+
+
+}

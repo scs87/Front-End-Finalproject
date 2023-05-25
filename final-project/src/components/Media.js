@@ -3,11 +3,14 @@ import "./Media.css"
 import { fetchSearchedGiphys, fetchTrendingGiphys } from '../api/giphyApi';
 import TrendingGiphy from './TrendingGiphy';
 import giphyArtists from '../artists';
-import ArtistGiphy from './ArtistGiphy'
+import ArtistGiphy from './ArtistGiphy';
+import ClipsDeGihpy from './ClipsDeGihpy';
+
 
 const Media = () => {
     const [trending, setTrending] = useState([]);
     const [artists, setArtists] = useState([]);
+    const [clips, setClips] = useState([]);
 
     const randomizeData = (content) => {
 
@@ -25,17 +28,24 @@ const Media = () => {
         const artists = await Promise.all(
         giphyArtists.map(async (giphyArtist) => {
             return fetchSearchedGiphys(giphyArtist).then((res) => res.data.data);
-
         })
         );
         setArtists(artists.flat()); 
+     };
+
+     const getSearchedGiphys = async (query, setState) => {
+        const searched = await fetchSearchedGiphys(query);
+        setState (randomizeData(searched.data));
+
      }
 
     useEffect(() => {
         getTrendingGiphys();
         getArtists();
+        getSearchedGiphys("coffee", setClips);
     }, []);
 
+        
 
     
 
@@ -69,7 +79,7 @@ const Media = () => {
                     <h1>Clips</h1>
                 </div>
                 <div className='clips-container'>
-                    <p>Content</p>
+                    <ClipsDeGihpy giphysArray={clips} />
                 </div>
             </div>
             <div className='row'>
