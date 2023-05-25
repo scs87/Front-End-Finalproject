@@ -11,6 +11,7 @@ const Media = () => {
     const [trending, setTrending] = useState([]);
     const [artists, setArtists] = useState([]);
     const [clips, setClips] = useState([]);
+    const [stories, setStories] = useState([]);
 
     const randomizeData = (content) => {
 
@@ -43,6 +44,7 @@ const Media = () => {
         getTrendingGiphys();
         getArtists();
         getSearchedGiphys("cats", setClips);
+        getSearchedGiphys("pose", setStories);
     }, []);
 
         
