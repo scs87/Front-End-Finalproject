@@ -19,14 +19,26 @@ const ClipsDeGihpy = ({ giphysArray }) => {
       {giphys && giphys.length ? (
         <>
           <div className='videogrande'>
-            <img src={giphys?.[0]?.images.downsized.url} alt=''/>
+            <img src={giphys?.[0]?.images.downsized.url} alt='' />
+            <div className='text'>
+              <img src='/images/giphyIconDark.png' alt='darklogo' />
+              <p>{giphys?.[0]?.title}</p>
+            </div>
           </div>
           <div className='videosderecha'>
-          <img src={giphys?.[1]?.images.downsized.url} alt='' />
-          <img src={giphys?.[2]?.images.downsized.url} alt=''/>
+            <img src={giphys?.[1]?.images.downsized.url} alt='' />
+            <div className='text'>
+              <img src='/images/giphyIconDark.png' alt='darklogo' />
+              <p>{giphys?.[1]?.title}</p>
+            </div>
+            <img src={giphys?.[2]?.images.downsized.url} alt='' />
+            <div className='text'>
+              <img src='/images/giphyIconDark.png' alt='darklogo' />
+              <p>{giphys?.[2]?.title}</p>
+            </div>
           </div>
         </>
-        ) : null}
+      ) : null}
     </div>
   );
 };
