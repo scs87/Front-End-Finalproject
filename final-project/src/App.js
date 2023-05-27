@@ -1,18 +1,13 @@
 import './App.css';
-import Header from "./components/Header"
-import SearchContainer from './components/SearchContainer';
-import Media from './components/Media';
+
+import Layout from './components/Layout';
+
 
 
 function App() {
   return (
     <div className="app">
-      <div className="principal">
-        <Header />
-        <SearchContainer />
-        <Media />
-
-      </div>
+      <Layout/>
     </div>
   );
 }

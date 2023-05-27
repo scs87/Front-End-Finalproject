@@ -1,10 +1,16 @@
 import React from 'react';
 import "./Header.css";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { KeyboardArrowDown } from "@mui/icons-material"
+import { KeyboardArrowDown, Login } from "@mui/icons-material"
+import {Link} from "react-router-dom"
 
+const credentials = { 
+     username: "Sergio",
+     password: "Clemente"
+    }
 
 const Header = () => {
+
     return (
         <div className='header'>
             <img src='/images/giphyLogo.png' alt='logo' />
@@ -48,7 +54,7 @@ const Header = () => {
                 <h2>Create</h2>
             </div>
             <div className='profile'>
-                <img src="/images/avatar1.png" alt='avatar' />
+               <Link to = "/login"> <img src="/images/avatar1.png" alt='avatar'/></Link>
                 <h2>Sergio</h2>
                 <KeyboardArrowDown />
             </div>
