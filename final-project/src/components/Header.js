@@ -3,13 +3,12 @@ import "./Header.css";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { KeyboardArrowDown, Login } from "@mui/icons-material"
 import {Link} from "react-router-dom"
+import { useAuth } from '../Context/Auth-context';
 
-const credentials = { 
-     username: "Sergio",
-     password: "Clemente"
-    }
 
 const Header = () => {
+
+    const {isAuth} = useAuth ()
 
     return (
         <div className='header'>
@@ -55,7 +54,7 @@ const Header = () => {
             </div>
             <div className='profile'>
                <Link to = "/login"> <img src="/images/avatar1.png" alt='avatar'/></Link>
-                <h2>Sergio</h2>
+                <h2>{isAuth ? "Sergio" : "Login"}</h2>
                 <KeyboardArrowDown />
             </div>
         </div>
