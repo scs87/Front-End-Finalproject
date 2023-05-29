@@ -3,8 +3,8 @@ import "./Media.css"
 import { fetchSearchedGiphys, fetchTrendingGiphys } from '../api/giphyApi';
 import TrendingGiphy from './TrendingGiphy';
 import giphyArtists from '../artists';
-import ArtistGiphy from './ArtistGiphy';
-import ClipsDeGihpy from './ClipsDeGihpy';
+import ArtistGiphy from './ArtistGiphy/ArtistGiphy';
+import ClipsDeGihpy from './Clips/ClipsDeGihpy';
 
 
 const Media = () => {
@@ -84,15 +84,7 @@ const Media = () => {
                     <ClipsDeGihpy giphysArray={clips} />
                 </div>
             </div>
-            <div className='row'>
-                <div className='row-header'>
-                    <img src='/images/stories.svg' alt='Stories' />
-                    <h1>Stories</h1>
-                </div>
-                <div className='stories-container'>
-                    <p>Content</p>
-                </div>
-            </div>
+            
         </div>
     )
 }

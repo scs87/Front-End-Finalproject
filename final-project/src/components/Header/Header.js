@@ -2,13 +2,13 @@ import React from 'react';
 import "./Header.css";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { KeyboardArrowDown, Login } from "@mui/icons-material"
-import {Link} from "react-router-dom"
-import { useAuth } from '../Context/Auth-context';
+import { Link } from "react-router-dom"
+import { useAuth } from '../../Context/Auth-context';
 
 
 const Header = () => {
 
-    const {isAuth} = useAuth ()
+    const { isAuth } = useAuth()
 
     return (
         <div className='header'>
@@ -29,31 +29,10 @@ const Header = () => {
                         <h2>Sports</h2>
                     </div>
                 </div>
-                <div className='button-wrapper stickers'>
-                    <div className='menu-button hover-stickers'>
-                        <h2>Stickers</h2>
-                    </div>
-                </div>
-                <div className='button-wrapper artists'>
-                    <div className='menu-button hover-artists'>
-                        <h2>Artists</h2>
-                    </div>
-                </div>
-                <div className='button-wrapper moreverticon'>
-                    <div className='menu-button hover-moreverticon'>
-                        <MoreVertIcon />
-                    </div>
-                </div>
-
             </div>
-            <div className='button'>
-                <h2>Upload</h2>
-            </div>
-            <div className='button'>
-                <h2>Create</h2>
-            </div>
+         
             <div className='profile'>
-               <Link to = "/login"> <img src="/images/avatar1.png" alt='avatar'/></Link>
+                <Link to="/login"> <img src="/images/avatar1.png" alt='avatar' /></Link>
                 <h2>{isAuth ? "Sergio" : "Login"}</h2>
                 <KeyboardArrowDown />
             </div>

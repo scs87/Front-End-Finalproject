@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from './Header'
-import SearchContainer from './SearchContainer'
-import Media from './Media'
+import Header from '../Header/Header'
+import SearchContainer from '../SearchContainer/SearchContainer'
+import Media from '../Media'
 
 const Home = () => {
   return (
