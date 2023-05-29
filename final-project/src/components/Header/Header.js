@@ -16,17 +16,17 @@ const Header = () => {
             <div className='menu'>
                 <div className='button-wrapper reactions'>
                     <div className='menu-button hover-reactions'>
-                        <h2>Reactions</h2>
+                        <h2>Trending</h2>
                     </div>
                 </div>
                 <div className='button-wrapper entertaiment'>
                     <div className='menu-button hover-entertaiment'>
-                        <h2>Entertaiment</h2>
+                        <h2>Artists</h2>
                     </div>
                 </div>
                 <div className='button-wrapper sports'>
                     <div className='menu-button hover-sports'>
-                        <h2>Sports</h2>
+                        <h2>Clips</h2>
                     </div>
                 </div>
             </div>
