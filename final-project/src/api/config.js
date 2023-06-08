@@ -1,0 +1,1 @@
+export const basePath = `${window.location.protocol}//${window.location.hostname}:3100/api`

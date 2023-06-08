@@ -5,6 +5,7 @@ import TrendingGiphy from './TrendingGiphy';
 import giphyArtists from '../artists';
 import ArtistGiphy from './ArtistGiphy/ArtistGiphy';
 import ClipsDeGihpy from './Clips/ClipsDeGihpy';
+import { getGifsApi } from '../api/gif.api';
 
 
 const Media = () => {
@@ -12,6 +13,7 @@ const Media = () => {
     const [artists, setArtists] = useState([]);
     const [clips, setClips] = useState([]);
     const [stories, setStories] = useState([]);
+    const [dbgif, setDbgif] = useState([]);
 
     const randomizeData = (content) => {
 
@@ -47,6 +49,13 @@ const Media = () => {
         getSearchedGiphys("pose", setStories);
     }, []);
 
+    useEffect(() => {
+        getGifsApi().then((result) =>{
+          setDbgif (result.gif)
+        })
+      
+        
+      }, [])
         
 
     
@@ -84,6 +93,17 @@ const Media = () => {
                     <ClipsDeGihpy giphysArray={clips} />
                 </div>
             </div>
+            <div className='trending-container'>
+                    {dbgif.map((dbgif, index) => {
+                        return (
+                            <div>
+                                <p>{dbgif.name}</p>
+                                <img src={dbgif.imageurl}  />
+                            </div>
+                        )
+                    })}
+                </div>
+            
             
         </div>
     )
